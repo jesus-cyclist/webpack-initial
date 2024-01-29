@@ -5,7 +5,6 @@ export function buildResolvers(options: TBuildOptions) {
     extensions: ['.tsx', '.ts', '.js'], //расширения для файлов, чтобы не писать его при импортах,
     alias: {
       '@': options.paths.src,
-      '@enteties': `${options.paths.src}/enteties`,
     },
   }
 }
