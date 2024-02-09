@@ -25,6 +25,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@shared*": ["./src/shared*"],
+      "@assets*": ["./src/shared/ui/assets*"]
     }
   },
   "ts-node": {
