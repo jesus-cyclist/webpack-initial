@@ -14,4 +14,5 @@ export type TBuildPaths = {
     html: string
     public: string
     src: string
+    linter: string
 }

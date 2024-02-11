@@ -4,11 +4,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import path from 'path'
 import { Configuration, DefinePlugin } from 'webpack'
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+// import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import type { TBuildOptions } from './types/types'
 import TerserPlugin from 'terser-webpack-plugin'
-import ESLintPlugin from 'eslint-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
 
 export function buildPlugins(options: TBuildOptions): Configuration['plugins'] {
     const { mode, paths, platform } = options
@@ -30,11 +30,7 @@ export function buildPlugins(options: TBuildOptions): Configuration['plugins'] {
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin())
-        plugins.push(
-            new ESLintPlugin({
-                eslintPath: path.resolve(paths.src, '.eslintrc')
-            })
-        )
+        plugins.push(new ESLintPlugin())
     }
 
     if (isProd) {

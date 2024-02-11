@@ -1,6 +1,6 @@
 import './styles/minireset.min.scss'
+import React from 'react'
 
 export const App = () => {
-    const b = 0
     return <div>BUILD YOUR APP</div>
 }
