@@ -6,20 +6,20 @@ const root = document.getElementById('root')
 const container = createRoot(root)
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: '/about',
-        element: <h1>about</h1>,
-      },
-      {
-        path: '/shop',
-        element: <h1>shop</h1>,
-      },
-    ],
-  },
+    {
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                path: '/about',
+                element: <h1>about</h1>,
+            },
+            {
+                path: '/shop',
+                element: <h1>shop</h1>,
+            },
+        ],
+    },
 ])
 
 container.render(<RouterProvider router={router} />)
