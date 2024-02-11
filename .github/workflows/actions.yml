@@ -1,11 +1,7 @@
 name: Actions
-on:
-    push:
-        branches: [main]
-    pull_request:
-        branches: [main]
+on: [push]
 jobs:
-    init:
+    test:
         runs-on: ubuntu-latest
         strategy:
             matrix:
