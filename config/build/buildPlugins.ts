@@ -32,7 +32,7 @@ export function buildPlugins(options: TBuildOptions): Configuration['plugins'] {
         plugins.push(new ReactRefreshWebpackPlugin())
         plugins.push(
             new ESLintPlugin({
-                eslintPath: path.resolve(paths.src, 'eslintrc.js')
+                eslintPath: path.resolve(paths.src, '.eslintrc')
             })
         )
     }
@@ -44,7 +44,7 @@ export function buildPlugins(options: TBuildOptions): Configuration['plugins'] {
                 chunkFilename: 'css/[name].[contenthash:8].css'
             })
         )
-        plugins.push(new BundleAnalyzerPlugin()) //размер чанок
+        // plugins.push(new BundleAnalyzerPlugin()) //размер чанок
         plugins.push(
             new CopyPlugin({
                 patterns: [
